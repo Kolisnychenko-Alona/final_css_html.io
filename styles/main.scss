@@ -1,0 +1,495 @@
+@import "base/base";
+@import "base/variables";
+@import "base/mixins";
+
+
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Roboto', sans-serif;
+#body{
+  background-color: $background-color;
+}
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+.header {
+  width: 1440px;
+  height: 700px;
+  background-image: url("../images/Background.png");
+  background-position: center;
+  &_top {
+    @include size(945px, 72px);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto 153px;
+    &_logo {
+      font: {
+        family: "Montserrat", sans-serif;
+        style: normal;
+        weight: bold;
+        size: 19px;
+      }
+      line-height: 24px;
+      letter-spacing: 1px;
+      text-align: center;
+      color: $text-color;
+    }
+    &_button {
+      width: 154px;
+      display: flex;
+      margin-right: 43px;
+      margin-bottom: -6px;
+      justify-content: space-between;
+      &_log-in {
+        font: {
+          family: "Montserrat", sans-serif;
+          style: normal;
+          weight: 300;
+          size: 14px;
+        }
+        line-height: 35px;
+        text-align: center;
+        color: $text-color;
+        text-decoration: none;
+      }
+      &_sign-up {
+        @include size(90px, 36px);
+        font: {
+          family: "Montserrat", sans-serif;
+          style: normal;
+          weight: 400;
+          size: 14px;
+        }
+        line-height: 30px;
+        text-align: center;
+        border: 2px solid #ffffff;
+        box-sizing: border-box;
+        border-radius: 40px;
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+  &_title {
+    @include size(500px, 126px);
+    font: {
+      family: "Montserrat", sans-serif;
+      style: normal;
+      weight: 700;
+      size: 51px;
+    }
+    line-height: 63px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0 auto;
+    color: $text-color;
+    margin-bottom: 28px;
+  }
+  &_text{
+    @include size (396px, 25px);
+    font: {
+      family: "Roboto", sans-serif;
+      style: normal;
+      weight: 300;
+      size: 24px;
+    }
+    line-height: 24px;
+    text-align: center;
+    margin: 0 auto 33px;
+    color: #F7F3F2;
+  }
+  &_button{
+    @include size (225px, 40px);
+    font: {
+      family: "Montserrat", sans-serif;
+      style: normal;
+      weight: 700;
+      size: 14px;
+    }
+    line-height: 17px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    background-color: $button-color;
+    color: $text-color;
+    border: none;
+    border-radius: 40px;
+    
+  }
+}
+.content{
+  width: 1440px;
+  &_description{
+    @include size( 940px, 461px);
+    margin: 89px auto;
+    &_title{
+      font: {
+      family: "Montserrat", sans-serif;
+      style: normal;
+      weight: 700;
+      size: 26px;
+      }
+      line-height: 32px;
+      text-align: center;
+      color: $darck-color;
+      margin-bottom: 35px;
+    }
+    &_steps{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 400px ;
+      grid-column-gap: 20px;
+      &_article.step1{
+        background-image: url('../images/Step1image.png');
+      }
+      &_article.step2{
+        background-image: url('../images/Step2image.png');
+      }
+      &_article.step3{
+        background-image: url('../images/Step3image.png');
+      }
+      &_article{
+        @include size(300px, 400px);
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        padding: {
+          left: 25px;
+          right: 25px;
+          bottom: 10px;
+        } 
+        &_button{
+          @include size (70px, 20px);
+          background: $button-color;
+          border: none;
+          border-radius: 40px;
+          font: {
+            family: "Montserrat", sans-serif;
+            style: normal;
+            weight: 400;
+            size: 10px;
+          }
+          line-height: 13px;
+          text-align: center;
+          color: $text-color;
+          letter-spacing: 2px;
+          margin-bottom: 22px;
+        }
+        &_name{
+          font: {
+            family: "Montserrat", sans-serif;
+            style: normal;
+            weight: 700;
+            size: 24px;
+          }
+          line-height: 26px;
+          color: $text-color;
+          margin-bottom: 24px;
+        }
+        &_text{
+          font: {
+            family: "Roboto", sans-serif;
+            style: normal;
+            weight: 300;
+            size: 14px;
+          }
+          line-height: 14px;
+          color: #E3E3E3;
+          margin-bottom: 10px;
+        }
+      }
+
+    }
+  }
+  &_partners{
+    @include size (940px, 361px);
+    margin: 95px auto;
+    &_title{
+     @extend .content_description_title;
+    }
+    &_cards{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 221px 221px 221px 221px;
+      grid-template-rows: 224px ;
+      grid-column-gap: 19px;
+      &_member{
+        @include size (221px, 224px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_image {
+          @include size (120px, 120px);
+          border-radius: 50%;
+          margin-bottom: 20px;
+          position: relative;
+        }
+        &_image::after{
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -4px;
+          right: -4px;
+          @include size (32px, 32px);
+          border: 3px solid white;
+          border-radius: 50%;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        &_image.music{
+          background-image: url('../images/music.png');
+        }
+        &_image.music::after{
+          background-color: #FF4E50;
+          background-image: url('../images/note.png');
+        }
+        &_image.art{
+          background-image: url('../images/paint.png');
+        }
+        &_image.art::after{
+          background-color: #19D4CA;
+          background-image: url('../images/brush.png');
+        }
+        &_image.photo{
+          background-image: url('../images/photo.png');
+        }
+        &_image.photo::after{
+          background-color: #FFA710;
+          background-image: url('../images/camera.png');
+        }
+        &_image.travel{
+          background-image: url('../images/fly.png');
+        }
+        &_image.travel::after{
+          background-color: #667DF3;
+          background-image: url('../images/airplane.png');
+        }
+        &_name{
+           font: {
+            family: "Montserrat", sans-serif;
+            style: normal;
+            weight: 700;
+            size: 14px;
+          }
+          line-height: 17px;
+          text-align: center;
+          color: $darck-color;
+          margin-bottom: 21px;
+        }
+        &_text{
+          font: {
+            family: "Roboto", sans-serif;
+            style: normal;
+            weight: 300;
+            size: 14px;
+          }
+          line-height: 14px;
+          text-align: center;
+          color: #666666;
+        }
+      }
+    }
+    &_button{
+      @include size (180px, 40px);
+      background: #FFFFFF;
+      border: 2px solid $button-color;
+      border-radius: 40px;
+      font: {
+        family: "Montserrat", sans-serif;
+        style: normal;
+        weight: 700;
+        size: 14px;
+      }
+      line-height: 17px;
+      text-align: center;
+      color: $button-color;
+      display: block;
+      margin: 38px auto 0;
+    }
+  }
+  &_ideas{
+    @include size (940px, 1031px);
+    margin: 95px auto;
+    &_title{
+      @extend .content_description_title;
+    }
+    &_activitis{
+      width: 100%;
+      height: 970px;
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-template-rows: 310px 310px 310px;
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      &_choice{
+        font: {
+          family: "Montserrat", sans-serif;
+          style: normal;
+          weight: 700;
+          size: 22px;
+        }
+        text-align: center;
+        line-height: 310px;
+        color: $text-color;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-blend-mode: multiply;
+      }
+      &_choice.sports{
+        background-image: url('../images/sports.png');
+      }
+      &_choice.wellness{
+        background-image: url('../images/wellness.png');
+      }
+      &_choice.extreme{
+        line-height: 26px;
+        padding-top: 130px;
+        background-image: url('../images/extreme.png');
+      }
+      &_choice.games{
+        background-image: url('../images/games.png');
+      }
+      &_choice.culture{
+        grid-column: 2 / 4;
+        background-image: url('../images/culture.png');
+      }
+      &_choice.relaxation{
+        grid-column: 1 / 3;
+        background-image: url('../images/relaxion.png');
+      }
+      &_choice.trevelling{
+        background-image: url('../images/travelling.png');
+      }
+
+
+    }
+  }
+  &_interaction{
+    @include size( 482px, 158px);
+    margin: 89px auto;
+    &_title{
+      @extend .content_description_title;
+    }
+    &_question{
+      font: {
+        family: "Roboto", sans-serif;
+        style: normal;
+        weight: 300;
+        size: 18px;
+      }
+      text-align: center;
+      line-height: 20px;
+      color: #666666;
+      margin-top: 50px;
+    }
+    &_answer{
+      @include size(482px, 40px);
+      margin: 23px auto;
+      display: flex;
+      justify-content: space-between;
+      &_text{
+        @include size(298px, 40px);
+        background: #FFFFFF;
+        border: 1px solid #D4D4D4;
+        box-sizing: border-box;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+        border-radius: 3px;
+      }
+      &_text::placeholder{
+          font: {
+            family: "Roboto", sans-serif;
+            style: normal;
+            weight: 300;
+            size: 14px;
+          }
+          color: #999999;
+          line-height: 16px;
+          padding-left: 10px;
+      }
+      &_button{
+        @include size (172px, 40px);
+        background: $button-color;
+        border: none;
+        border-radius: 40px;
+        font: {
+          family: "Montserrat", sans-serif;
+          style: normal;
+          weight: 700;
+          size: 14px;
+        }
+        line-height: 17px;
+        text-align: center;
+        color: $text-color;
+        }
+    }
+  }
+}
+.footer{
+ width: 1440px;
+ border-top: 2px solid $button-color;
+ margin-top: 107px;
+ &_nav{
+  width: 940px;
+  height: 224px;
+  margin: 38px auto;
+  display: grid;
+  grid-template-columns: 230px 230px 230px 224px;
+  grid-template-rows: 224px;
+  grid-column-gap: 10px;
+  &_dreamshare{
+    font: {
+      family: "Montserrat", sans-serif;
+      style: normal;
+      weight: 400;
+      size: 16px;
+    }
+    line-height: 20px;
+    color: $button-color;
+  }
+  &_company_title{
+    font: {
+      family: "Montserrat", sans-serif;
+      style: normal;
+      weight: 700;
+      size: 14px;
+    }
+    line-height: 17px;
+    color: $darck-color;
+    margin-bottom: 11px;
+  }
+  &_company_menu{
+    font: {
+      family: "Robobto", sans-serif;
+      style: normal;
+      weight: 300;
+      size: 14px;
+    }
+    line-height: 26px;
+    color: #999999;
+  }
+  &_partners{
+    @extend .footer_nav_company_title;
+  }
+  &_logo_text{
+    font: {
+      family: "Montserrat", sans-serif;
+      style: normal;
+      weight: 700;
+      size: 10px;
+    }
+    line-height: 12px;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #CCCCCC;
+  }
+  &_logo_icon{
+    @include size (110px, 24px);
+    margin-top: 7px;
+    margin-left: 110px;
+  }
+ }
+}
+@import "base/media1450";
+@import "base/media780";

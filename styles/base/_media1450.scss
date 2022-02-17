@@ -1,0 +1,116 @@
+@media screen and (max-width: 1450px){
+    .container{
+        width: 768px;
+        margin: 0 auto;
+    }
+    .header{
+        width: 768px;
+        &_top {
+            @include size(670px, 70px);
+            &_button{
+                margin-right: 1px;
+                margin-bottom: -7px;
+            }
+            
+        }
+        &_title{
+            @include size(475px, 126px);
+            font-size: 51px;
+        }
+    }
+    .content{
+        width: 768px;
+        &_description{
+            @include size( 748px, 461px);
+            margin-top: 94px;
+            &_title{
+                font-size: 22px;
+                line-height: 27px;
+            }
+            &_steps{
+                grid-template-columns: 236px 236px 236px;
+                &_article{
+                    @include size(236px, 400px);
+                    padding: {
+                        left: 20px;
+                        right: 20px;
+                        bottom: 6px;
+                    }
+                    &_button{
+                        margin-bottom: 45px;
+                    }
+                    &_name{
+                        line-height: 14px;
+                        margin-bottom: 29px;
+                    }
+                }
+            }
+        }
+        &_partners{
+            @include size (492px, 605px);
+            &_title{
+                font-size: 22px;
+                line-height: 27px;
+            }
+            &_cards{
+                grid-template-columns: 236px 236px;
+                grid-template-rows: 224px 224px;
+                grid-row-gap: 35px;
+                grid-auto-flow: column;
+                &_member{
+                    @include size (236px, 224px);
+                    &_image::after{
+                        bottom: -3px;
+                        right: -3px;
+                    }
+                }
+            }
+            &_button{
+                margin-top: 21px;
+            }
+        }
+        &_ideas{
+            @include size (748px, 1031px);
+            &_title{
+                font-size: 22px;
+                line-height: 27px;
+            }
+            &_activitis{
+                grid-template-columns: 236px 236px 236px;
+                &_choice.sports{
+                    line-height: 26px;
+                    padding: 116px 23px 0 23px;
+                    background-position-x: -40px;
+                }
+                &_choice.wellness{
+                    line-height: 26px;
+                    padding: 129px 23px 0 23px;
+                    background-position-x: -40px;
+                }
+                &_choice.extreme{
+                    background-position-x: -20px;
+                }
+                &_choice.games{
+                    line-height: 26px;
+                    padding: 143px 23px 0 23px;
+                    background-position-x: -30px;
+                }
+                &_choice.culture{
+                    line-height: 26px;
+                    padding: 143px 23px 0 23px;
+                    background-position-x: -70px;
+                }
+            }
+
+        }
+    }    
+    .footer{
+        width: 768px;
+        margin-top: 102px;
+        &_nav{
+            width:690px;
+            grid-template-columns: 217px 161px 61px 220px;
+        }
+    }
+    
+}

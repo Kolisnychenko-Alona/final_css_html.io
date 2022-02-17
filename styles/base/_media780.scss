@@ -1,0 +1,213 @@
+@media screen and (max-width: 780px){
+    .container{
+        width: 320px;
+    }
+    .header{
+        width: 320px;
+        height: 540px;
+        background-image: url("../images/BackgroundMobile.png");
+        background-color: rgba(0, 0, 0, 0.2);
+        background-blend-mode: multiply;
+        &_top{
+            @include size(155px, 178px);
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            padding-top: 20px;
+            margin-bottom: 26px;
+        }
+        &_title{
+            @include size(287px, 74px);
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 6px;
+            letter-spacing: 0px;
+        }
+        &_text{
+            @include size (280px, 49px);
+            font-size: 18px;
+            line-height: 24px;
+            margin-bottom: 14px;
+        }
+        &_button{
+           @include size (280px, 40px); 
+        }
+    }
+    .content{
+        width: 320px;
+        &_description{
+            @include size( 300px, 781px);
+            margin: 34px auto;
+            &_title{
+                margin-bottom: 15px;
+            }
+            &_steps{
+                grid-template-columns: 300px;
+                grid-template-rows: 240px 240px 240px;
+                grid-column-gap: 0px;
+                grid-row-gap: 10px;
+                &_article{
+                    @include size(300px, 240px);
+                    padding-right: 30px;
+                    &_button{
+                        margin-bottom: 45px; 
+                    }
+                    &_name{
+                        margin-bottom: 25px;
+                    }
+                    &_text{
+                        margin-bottom: 9px;
+                    }
+                } 
+                &_article.step1{
+                    background-image: url('../images/Step1mobile.png');
+                }
+                &_article.step2{
+                    background-image: url('../images/Step2mobile.png');
+                }
+                &_article.step3{
+                    background-image: url('../images/Step3mobile.png');
+                } 
+            }
+        }
+        &_partners{
+            @include size (300px, 1031px);  
+            margin: 36px auto;
+            &_cards{
+                grid-template-columns: 236px;
+                grid-template-rows: 205px 205px 224px 224px;
+                grid-row-gap: 16px;
+                justify-content: center;
+                grid-auto-flow: row;   
+            }
+            &_button{
+                @include size (280px, 40px);
+                margin: 18px auto 0;
+            }
+        }
+        &_ideas{
+           @include size (300px, 987px); 
+           margin: 35px auto;
+           &_title{
+               @include size (280px, 54px);
+               margin: 0 auto 33px;
+            }
+            &_activitis{
+                height: 900px;
+                grid-template-columns: 300px;
+                grid-template-rows: 120px 120px 120px 120px 120px 120px 120px;
+                grid-column-gap: 0px;
+                grid-row-gap: 10px;
+                &_choice.sports{
+                    grid-row: 1 / 2;
+                    padding: 21px 66px 0 66px;
+                    background-image: url('../images/sportsmobile.png');
+                    background-position-x: 0;
+                }
+                &_choice.wellness{
+                    grid-row: 2 / 3;
+                    padding: 34px 66px 0 66px;
+                    background-position-x: 0px;
+                    background-image: url('../images/wellnessmobile.png');
+                }
+                &_choice.extreme{
+                    grid-row: 3 / 4;
+                    padding: 35px 23px 0 23px;
+                    background-position-x: 0px;
+                    background-image: url('../images/extrememobile.png');
+                }
+                &_choice.games{
+                    grid-row: 4 / 5;
+                    padding: 48px 23px 0 23px;
+                    background-position-x: 0px;
+                    background-image: url('../images/gamesmobile.png');
+                }
+                &_choice.culture{
+                    grid-row: 5 / 6;
+                    grid-column: 1 / 2;
+                    padding: 48px 14px 0 17px;
+                    background-position-x: 0px;
+                    background-image: url('../images/culturemobile.png');
+                }
+                &_choice.relaxation{
+                    grid-row: 6 / 7;
+                    grid-column: 1 / 2;
+                    padding: 47px 0px 0 2px;
+                    line-height: 26px;
+                    background-image: url('../images/relaxionmobile.png');
+                }
+                &_choice.trevelling{
+                    grid-row: 7 / 8;
+                    padding: 47px 23px 0 23px;
+                    line-height: 26px;
+                    background-image: url('../images/travellingmobile.png');
+                }
+            }
+        }
+        &_interaction{
+            @include size( 300px, 192px);
+            margin: 35px auto;
+            &_question{
+                margin-top: 16px;
+            }
+            &_answer{
+                @include size(280px, 90px);
+                margin: 12px auto;
+                flex-direction: column;
+                align-items: center;
+                &_text{
+                    @include size(280px, 40px);
+                }
+                &_button{
+                    @include size (280px, 40px);
+                }
+            }
+        }
+    }
+    .footer{
+        width: 320px;
+        margin-top: 40px;
+        &_nav{
+            width: 320px;
+            height: 204px;
+            margin: 19px auto; 
+            grid-template-columns: 320px;
+            grid-template-rows: 34px 76px 30px 62px ;
+            grid-column-gap: 0px; 
+            &_dreamshare{
+                margin: 0 auto;
+            }
+            &_company{
+                margin: 0 124px;
+                &_title{
+                    margin-bottom: 0px;
+                }
+                &_menu{
+                    margin-left: -58px;
+                    width: 202px;
+                  li{
+                    display: inline;
+                    margin-right: 10px;
+                  } 
+                  .li{
+                    margin-left: 17px;
+                  }
+                }
+            }
+           
+            &_partners{
+                margin: 0 auto;
+            }
+            &_logo{
+                margin: 0 auto;
+                &_text{
+                    text-align: center;
+                }
+                &_icon{
+                    margin-left: 0;
+                }
+            }
+            
+
+        }
+    }
+}
